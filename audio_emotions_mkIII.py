@@ -10,7 +10,7 @@ import pygame# For visual feedback
 from audio_emotions_mkII import EmotionCNN
 
 class RealtimeEmotionAnalyzer:
-    def __init__(self, model_path='best_emotion_model.pth', buffer_duration=3, sample_rate=16000):
+    def __init__(self, model_path='Audio_empath/best_emotion_model.pth', buffer_duration=3, sample_rate=16000):
         # Initialize PyGame for visualization
         pygame.init()
         self.screen = pygame.display.set_mode((800, 400))
@@ -169,7 +169,7 @@ class RealtimeEmotionAnalyzer:
             self.running = False
 
 def main():
-    analyzer = RealtimeEmotionAnalyzer('best_emotion_model.pth')
+    analyzer = RealtimeEmotionAnalyzer('Audio_empath/best_emotion_model.pth')
     analyzer.run()
 
 if __name__ == "__main__":
