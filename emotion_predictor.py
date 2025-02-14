@@ -126,8 +126,8 @@ def main():
     os.makedirs("recordings", exist_ok=True)
     
     # Initialize predictor
-    predictor = EmotionPredictor('best_emotion_model.pth')
-    
+    predictor = EmotionPredictor('Audio_empath/best_emotion_model.pth')
+    print("Looking for model at:", os.path.abspath('best_emotion_model.pth'))
     while True:
         print("\nEmotion Recognition Menu:")
         print("1. Predict from audio file")
